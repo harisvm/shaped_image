@@ -9,7 +9,7 @@ class ClipPathClass extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     switch(shape){
-      case Shape.CIRCULAR:
+      case Shape.CURVED:
         _drawCurvedShape(size);
         break;
         default:

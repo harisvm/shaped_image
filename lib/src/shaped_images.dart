@@ -8,11 +8,29 @@ enum ImageTye { ASSET, NETWORK }
 class ShapedImages extends StatefulWidget {
   Shape? shape;
   ImageTye? imageTye;
+  double? height;
+  double? width;
+  Color? color;
+  String? path;
+  Key? key;
+  BoxFit? boxFit;
+  AlignmentGeometry? alignmentGeometry;
+  ImageErrorWidgetBuilder? imageErrorWidgetBuilder;
 
   @override
   _ShapedImagesState createState() => _ShapedImagesState();
 
-  ShapedImages({@required this.shape, @required this.imageTye});
+  ShapedImages(
+      {@required this.shape,
+      @required this.imageTye,
+      @required this.path,
+      this.height,
+      this.width,
+      this.key,
+      this.boxFit,
+      this.alignmentGeometry,
+      this.imageErrorWidgetBuilder,
+      this.color});
 }
 
 class _ShapedImagesState extends State<ShapedImages> {
@@ -22,11 +40,23 @@ class _ShapedImagesState extends State<ShapedImages> {
       clipper: ClipPathClass(shape: widget.shape),
       child: widget.imageTye == ImageTye.ASSET
           ? Image.asset(
-              '',
-              height: 100,
-              width: 100,
+              widget.path.toString(),
+              height: widget.height,
+              width: widget.width,
+              color: widget.color,
+              key: widget.key,
+              fit: widget.boxFit,
+              errorBuilder: widget.imageErrorWidgetBuilder,
             )
-          : Image.network(''),
+          : Image.network(
+              widget.path.toString(),
+              height: widget.height,
+              width: widget.width,
+              color: widget.color,
+              key: widget.key,
+              fit: widget.boxFit,
+              errorBuilder: widget.imageErrorWidgetBuilder,
+            ),
     );
   }
 }
