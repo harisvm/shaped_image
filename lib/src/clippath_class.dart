@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shaped_images/shaped_images.dart';
 
-
-
 class ClipPathClass extends CustomClipper<Path> {
   Shape? shape;
 
@@ -12,41 +10,29 @@ class ClipPathClass extends CustomClipper<Path> {
   Path getClip(Size size) {
     switch (shape) {
       case Shape.SHAPE01:
-        _drawShape01(size);
-        break;
+        return _drawShape01(size);
       case Shape.SHAPE02:
-        _drawShape02(size);
-        break;
+        return _drawShape02(size);
       case Shape.SHAPE03:
-        _drawShape03(size);
-        break;
+        return _drawShape03(size);
       case Shape.SHAPE04:
-        _drawShape04(size);
-        break;
+        return _drawShape04(size);
       case Shape.SHAPE05:
-        _drawShape05(size);
-        break;
+        return _drawShape05(size);
       case Shape.SHAPE06:
-        _drawShape06(size);
-        break;
+        return _drawShape06(size);
       case Shape.SHAPE07:
-        _drawShape07(size);
-        break;
-        case Shape.TRIANGLE:
-        _drawTriangle(size);
-        break;
+        return _drawShape07(size);
+      case Shape.TRIANGLE:
+        return _drawTriangle(size);
       default:
         return _drawNothing(size);
     }
-
-    return _drawNothing(size);
   }
 
   @override
   bool shouldReclip(CustomClipper<Path> oldClipper) => false;
 }
-
-
 
 Path _drawShape01(Size size) {
   Path path = Path();
@@ -142,10 +128,9 @@ Path _drawNothing(Size size) {
   return path;
 }
 
-
 Path _drawTriangle(Size size) {
   final path = Path();
-  path.moveTo(size.width/2, 0.0);
+  path.moveTo(size.width / 2, 0.0);
   path.lineTo(size.width, size.height);
   path.lineTo(0.0, size.height);
   path.close();
