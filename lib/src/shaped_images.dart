@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:shaped_images/src/clippath_class.dart';
 
-enum Shape { CIRCULAR, CURVED, ROUND }
-enum ImageTye { ASSET, NETWORK }
+enum ImageType { ASSET, NETWORK }
 
 // ignore: must_be_immutable
 class ShapedImages extends StatefulWidget {
   Shape? shape;
-  ImageTye? imageTye;
+  ImageType? imageTye;
   double? height;
   double? width;
   Color? color;
@@ -38,7 +37,7 @@ class _ShapedImagesState extends State<ShapedImages> {
   Widget build(BuildContext context) {
     return ClipPath(
       clipper: ClipPathClass(shape: widget.shape),
-      child: widget.imageTye == ImageTye.ASSET
+      child: widget.imageTye == ImageType.ASSET
           ? Image.asset(
               widget.path.toString(),
               height: widget.height,
