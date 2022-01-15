@@ -49,7 +49,7 @@ Path _drawShape02(Size size) {
   Path path = Path();
   path.lineTo(0, size.height);
   path.quadraticBezierTo(
-      size.width / 2, size.height - 100, size.width, size.height);
+      size.width / 2, size.height - size.height/3, size.width, size.height);
   path.lineTo(size.width, 0);
 
   return path;
