@@ -33,7 +33,8 @@ class ClipPathClass extends CustomClipper<Path> {
         _drawShape07(size);
         break;
         case Shape.TRIANGLE:
-       return _drawTriangle(size);
+        _drawTriangle(size);
+        break;
       default:
         return _drawNothing(size);
     }
