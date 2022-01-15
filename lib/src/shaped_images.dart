@@ -2,7 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:shaped_images/src/clippath_class.dart';
 
 enum ImageType { ASSET, NETWORK }
-
+enum Shape {
+  SHAPE01,
+  SHAPE02,
+  SHAPE03,
+  SHAPE04,
+  SHAPE05,
+  SHAPE06,
+  SHAPE07,
+  CIRCULAR,
+  CURVED,
+  ROUND
+}
 // ignore: must_be_immutable
 class ShapedImages extends StatefulWidget {
   Shape? shape;

@@ -1,17 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shaped_images/shaped_images.dart';
 
-enum Shape {
-  SHAPE01,
-  SHAPE02,
-  SHAPE03,
-  SHAPE04,
-  SHAPE05,
-  SHAPE06,
-  SHAPE07,
-  CIRCULAR,
-  CURVED,
-  ROUND
-}
+
 
 class ClipPathClass extends CustomClipper<Path> {
   Shape? shape;
