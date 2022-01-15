@@ -12,7 +12,8 @@ enum Shape {
   SHAPE07,
   CIRCULAR,
   CURVED,
-  ROUND
+  ROUND,
+  TRIANGLE
 }
 // ignore: must_be_immutable
 class ShapedImages extends StatefulWidget {

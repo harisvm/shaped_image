@@ -32,6 +32,8 @@ class ClipPathClass extends CustomClipper<Path> {
       case Shape.SHAPE07:
         _drawShape07(size);
         break;
+        case Shape.TRIANGLE:
+       return _drawTriangle(size);
       default:
         return _drawNothing(size);
     }
@@ -42,6 +44,8 @@ class ClipPathClass extends CustomClipper<Path> {
   @override
   bool shouldReclip(CustomClipper<Path> oldClipper) => false;
 }
+
+
 
 Path _drawShape01(Size size) {
   Path path = Path();
@@ -134,5 +138,15 @@ Path _drawShape07(Size size) {
 
 Path _drawNothing(Size size) {
   Path path = Path();
+  return path;
+}
+
+
+Path _drawTriangle(Size size) {
+  final path = Path();
+  path.moveTo(size.width/2, 0.0);
+  path.lineTo(size.width, size.height);
+  path.lineTo(0.0, size.height);
+  path.close();
   return path;
 }
