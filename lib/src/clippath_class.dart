@@ -60,7 +60,7 @@ Path _drawShape03(Size size) {
   path.lineTo(0, size.height);
   var curXPos = 0.0;
   var curYPos = size.height;
-  var increment = size.width / 30;
+  var increment = size.width / 50;
   while (curXPos < size.width) {
     curXPos += increment;
     curYPos = curYPos == size.height ? size.height*9/10 : size.height;
