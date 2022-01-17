@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shaped_images/shaped_images.dart';
+import 'package:shaped_image/shaped_image.dart';
+import 'package:shaped_image/shaped_image.dart';
 
 class ClipPathClass extends CustomClipper<Path> {
   Shape? shape;

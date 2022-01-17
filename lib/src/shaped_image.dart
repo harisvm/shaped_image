@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shaped_images/src/clippath_class.dart';
+import 'package:shaped_image/src/clippath_class.dart';
 
 enum ImageType { ASSET, NETWORK }
 enum Shape {
@@ -16,7 +16,7 @@ enum Shape {
   TRIANGLE
 }
 // ignore: must_be_immutable
-class ShapedImages extends StatefulWidget {
+class ShapedImage extends StatefulWidget {
   Shape? shape;
   ImageType? imageTye;
   double? height;
@@ -29,9 +29,9 @@ class ShapedImages extends StatefulWidget {
   ImageErrorWidgetBuilder? imageErrorWidgetBuilder;
 
   @override
-  _ShapedImagesState createState() => _ShapedImagesState();
+  _ShapedImageState createState() => _ShapedImageState();
 
-  ShapedImages(
+  ShapedImage(
       {@required this.shape,
       @required this.imageTye,
       @required this.path,
@@ -44,7 +44,7 @@ class ShapedImages extends StatefulWidget {
       this.color});
 }
 
-class _ShapedImagesState extends State<ShapedImages> {
+class _ShapedImageState extends State<ShapedImage> {
   @override
   Widget build(BuildContext context) {
     return ClipPath(
