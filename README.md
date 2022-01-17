@@ -26,4 +26,3 @@ dependencies:
 ![alt text](https://raw.githubusercontent.com/harisvm/shaped_image/master/assets/shapes.png)
 
 
-<img src="" alt="https://raw.githubusercontent.com/harisvm/shaped_image/master/assets/shapes.png" alt="">
