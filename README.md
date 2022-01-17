@@ -3,7 +3,7 @@
 A new Flutter package for showing images in different shapes
 
 ## Getting Started
-To use this package, add `shaped_image` as a [dependency in your pubspec.yaml file] 
+To use this package, add `shaped_image` as a dependency in your `pubspec.yaml` file
 
 ```yaml
 dependencies:

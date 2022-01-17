@@ -13,6 +13,7 @@ enum Shape {
   SHAPE08,
   TRIANGLE
 }
+
 // ignore: must_be_immutable
 class ShapedImage extends StatefulWidget {
   Shape? shape;
@@ -36,7 +37,7 @@ class ShapedImage extends StatefulWidget {
       this.height,
       this.width,
       this.key,
-      this.boxFit=BoxFit.cover,
+      this.boxFit = BoxFit.cover,
       this.alignmentGeometry,
       this.imageErrorWidgetBuilder,
       this.color});

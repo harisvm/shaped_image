@@ -5,3 +5,6 @@ available.More shapes will be added soon!
 
 ## 0.0.5
 Added new shape
+
+## 0.0.8
+Changed typos in readme
