@@ -24,6 +24,8 @@ class ClipPathClass extends CustomClipper<Path> {
         return _drawShape06(size);
       case Shape.SHAPE07:
         return _drawShape07(size);
+        case Shape.SHAPE08:
+        return _drawShape08(size);
       case Shape.TRIANGLE:
         return _drawTriangle(size);
       default:
@@ -128,6 +130,20 @@ Path _drawNothing(Size size) {
   Path path = Path();
   return path;
 }
+
+Path _drawShape08(Size size) {
+  var path = Path();
+  path.lineTo(0.0, size.height );
+  path.lineTo(size.width/2, size.height);
+
+  var firstControlPoint = Offset(size.width, size.height);
+  var firstPoint = Offset(size.width,0);
+  path.quadraticBezierTo(firstControlPoint.dx, firstControlPoint.dy,
+      firstPoint.dx, firstPoint.dy);
+  return path;
+}
+
+
 
 Path _drawTriangle(Size size) {
   final path = Path();
