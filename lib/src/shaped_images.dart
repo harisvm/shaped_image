@@ -24,7 +24,7 @@ class ShapedImages extends StatefulWidget {
   Color? color;
   String? path;
   Key? key;
-  BoxFit? boxFit=BoxFit.cover;
+  BoxFit? boxFit;
   AlignmentGeometry? alignmentGeometry;
   ImageErrorWidgetBuilder? imageErrorWidgetBuilder;
 
@@ -38,7 +38,7 @@ class ShapedImages extends StatefulWidget {
       this.height,
       this.width,
       this.key,
-      this.boxFit,
+      this.boxFit=BoxFit.cover,
       this.alignmentGeometry,
       this.imageErrorWidgetBuilder,
       this.color});
