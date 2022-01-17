@@ -24,7 +24,7 @@ class ClipPathClass extends CustomClipper<Path> {
         return _drawShape06(size);
       case Shape.SHAPE07:
         return _drawShape07(size);
-        case Shape.SHAPE08:
+      case Shape.SHAPE08:
         return _drawShape08(size);
       case Shape.TRIANGLE:
         return _drawTriangle(size);
@@ -39,9 +39,9 @@ class ClipPathClass extends CustomClipper<Path> {
 
 Path _drawShape01(Size size) {
   Path path = Path();
-  path.lineTo(0, size.height - size.height/3);
+  path.lineTo(0, size.height - size.height / 3);
   path.quadraticBezierTo(
-      size.width / 2, size.height, size.width, size.height - size.height/3);
+      size.width / 2, size.height, size.width, size.height - size.height / 3);
   path.lineTo(size.width, 0);
   path.close();
 
@@ -52,7 +52,7 @@ Path _drawShape02(Size size) {
   Path path = Path();
   path.lineTo(0, size.height);
   path.quadraticBezierTo(
-      size.width / 2, size.height - size.height/3, size.width, size.height);
+      size.width / 2, size.height - size.height / 3, size.width, size.height);
   path.lineTo(size.width, 0);
 
   return path;
@@ -66,7 +66,7 @@ Path _drawShape03(Size size) {
   var increment = size.width / 50;
   while (curXPos < size.width) {
     curXPos += increment;
-    curYPos = curYPos == size.height ? size.height*9/10 : size.height;
+    curYPos = curYPos == size.height ? size.height * 9 / 10 : size.height;
     path.lineTo(curXPos, curYPos);
   }
   path.lineTo(size.width, 0);
@@ -74,8 +74,8 @@ Path _drawShape03(Size size) {
   return path;
 }
 
-Path  _drawShape04(Size size) {
-  var radius = size.width/10;
+Path _drawShape04(Size size) {
+  var radius = size.width / 10;
 
   Path path = Path();
   path.moveTo(radius, 0.0);
@@ -133,17 +133,15 @@ Path _drawNothing(Size size) {
 
 Path _drawShape08(Size size) {
   var path = Path();
-  path.lineTo(0.0, size.height );
-  path.lineTo(size.width/2, size.height);
+  path.lineTo(0.0, size.height);
+  path.lineTo(size.width / 2, size.height);
 
   var firstControlPoint = Offset(size.width, size.height);
-  var firstPoint = Offset(size.width,0);
-  path.quadraticBezierTo(firstControlPoint.dx, firstControlPoint.dy,
-      firstPoint.dx, firstPoint.dy);
+  var firstPoint = Offset(size.width, 0);
+  path.quadraticBezierTo(
+      firstControlPoint.dx, firstControlPoint.dy, firstPoint.dx, firstPoint.dy);
   return path;
 }
-
-
 
 Path _drawTriangle(Size size) {
   final path = Path();
