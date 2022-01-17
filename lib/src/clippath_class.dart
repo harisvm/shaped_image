@@ -72,7 +72,7 @@ Path _drawShape03(Size size) {
 }
 
 Path _drawShape04(Size size) {
-  var radius = 10.0;
+  var radius = size.height/10;
 
   Path path = Path();
   path.moveTo(radius, 0.0);
