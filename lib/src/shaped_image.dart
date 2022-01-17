@@ -10,9 +10,6 @@ enum Shape {
   SHAPE05,
   SHAPE06,
   SHAPE07,
-  CIRCULAR,
-  CURVED,
-  ROUND,
   TRIANGLE
 }
 // ignore: must_be_immutable
